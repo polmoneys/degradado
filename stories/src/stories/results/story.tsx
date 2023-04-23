@@ -7,6 +7,7 @@ import { randomBool, sleep, handleErrors } from '../utils'
 import Results from './Result'
 import ResultsY from './ResultY'
 import Thumbnail from './Thumbnail'
+import { inflect } from './utils'
 
 export interface File {
   name: string
@@ -39,7 +40,7 @@ function ResultsDemo(): JSX.Element {
     getInputProps,
     fileRejections: fileRejectionsList,
   } = useDropzone({
-    disabled: resultFiles.length > 0,
+    disabled: newFiles.length > 0,
     maxFiles: 20,
     onDrop: (
       acceptedFiles: Array<Record<string, any>>,
@@ -77,6 +78,7 @@ function ResultsDemo(): JSX.Element {
     setResultFiles([])
   }
 
+  const pluralizeFiles = inflect('File')
   return (
     <div data-ad="" className="quicksand" id="demo-4">
       <div data-ad-item="6">
@@ -86,9 +88,13 @@ function ResultsDemo(): JSX.Element {
             {...getRootProps({
               className: 'dropzone',
             })}
+            style={{
+              opacity: newFiles.length > 0 ? 0.2 : 1,
+            }}
           >
-            <input {...getInputProps()} />
-            <div className="col gap ">
+            <div className="col  gap">
+              <input {...getInputProps()} />
+
               <svg
                 className="ml-auto mr-auto"
                 width="45px"
@@ -110,23 +116,25 @@ function ResultsDemo(): JSX.Element {
               <p>drop files</p>
             </div>
           </div>
-          <button
-            type="button"
-            disabled={newFiles.length === 0}
-            onClick={resetState}
-          >
-            Clear
-          </button>
         </div>
       </div>
 
       <div data-ad-item="6" className="sm" style={{ placeItems: 'start' }}>
         <div className="col fill gap">
           <div className="row fill" style={{ alignItems: 'center' }}>
-            <p className="xl">{newFiles.length} File/s</p>
+            <p className="xl">
+              {newFiles.length} {pluralizeFiles(newFiles.length)}
+            </p>
             <button
               type="button"
               className="ml-auto"
+              disabled={newFiles.length === 0}
+              onClick={resetState}
+            >
+              Clear
+            </button>
+            <button
+              type="button"
               disabled={newFiles.length === 0 || resultFiles.length > 0}
               onClick={onFakeUpoad}
             >

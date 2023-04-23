@@ -132,11 +132,15 @@ ol {
 
 button {
   padding: 0.2em 0.3em;
+  cursor: pointer;
   font-size: 18px;
 }
 
 button:disabled {
   opacity: 0.4;
+}
+button + button {
+  transform: translateX(-2px);
 }
 .row span:not(.tag) {
   display: inline-flex;
@@ -147,7 +151,7 @@ button:disabled {
 }
 
 .tag {
-  background-color: rgba(236, 136, 168, 1);
+  background-color: rgba(253, 236, 191, 1);
   padding: 0.1em;
   border-radius: 4px;
 }
