@@ -1,6 +1,6 @@
 ## TLDR
 
-Exploring `Gradients` or `degradados` for meaning. [Demo](https://polmoneys.github.io/degradado/)
+Exploring `Gradients` or `degradados` for meaning. [Demo](https://polmoneys.github.io/degradado/).
 
 ## How to
 
@@ -9,14 +9,14 @@ Spread to an element whatever you need from `useDegradado` or `useDegradadoRepea
 ```ts
 
 const { styles, onClick } = useDegradado({
-items: [
-{ name: 'Progress', color: '#444', stop: ['0%', '15%'] },
-{ name: 'To do', color: '#888', stop: ['15%', '100%'] },
-],
-direction: 'x',
-onSelect: name => {
-console.log(name)
-},
+    items: [
+        { name: 'Progress', color: '#444', stop: ['0%', '15%'] },
+        { name: 'To do', color: '#888', stop: ['15%', '100%'] },
+    ],
+    direction: 'x',
+    onSelect: name => {
+        console.log(name)
+    },
 })
 
 // ...
@@ -33,7 +33,7 @@ style={{ ...styles, cursor: 'pointer' }}
 
 ```
 
-You do you but I like to wrap/abstract both 'parts' into it's own component as in `<ProgressBar/>` so you can consume it with less noise. 
+You do you but I favour abstracting both 'parts' into it's own component as in `<ProgressBar/>` so you can consume it with less noise. 
 
 
 ## Custom gradient
@@ -102,9 +102,9 @@ We can create `charts` or group `results` by a boolean with `degradados`, while 
 
 ## More React
 
-[Sparklines](https://github.com/polmoneys/Sparkline),[Waffle](https://github.com/polmoneys/Waffle),[Charts](https://github.com/polmoneys/charts) for visualizing data. 
+[Sparklines](https://github.com/polmoneys/Sparkline), [Waffle](https://github.com/polmoneys/Waffle), [Charts](https://github.com/polmoneys/charts) for visualizing data. 
 
-[To my knowledge this is how to group elements into interfaces](https://github.com/polmoneys/tmk), tips on building [app](https://github.com/polmoneys/react-app) and how to [draaaag](https://github.com/polmoneys/draaaaaag)
+[To my knowledge](https://github.com/polmoneys/tmk) this is how to group elements into interfaces, tips on building [app](https://github.com/polmoneys/react-app) and how to [draaaag](https://github.com/polmoneys/draaaaaag).
 
 
 ## Inspiration 💐
