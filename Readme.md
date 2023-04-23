@@ -1,6 +1,6 @@
 ## TLDR
 
-Exploring `Gradients` or `degradados` for meaning. [Demo](https://codesandbox.io/s/barresults-ept62q?file=/src/App.tsx)
+Exploring `Gradients` or `degradados` for meaning. [Demo](https://polmoneys.github.io/degradado/)
 
 ## How to
 
@@ -105,7 +105,6 @@ We can create `charts` or group `results` by a boolean with `degradados`, while 
 [Sparklines](https://github.com/polmoneys/Sparkline),[Waffle](https://github.com/polmoneys/Waffle),[Charts](https://github.com/polmoneys/charts) for visualizing data. 
 
 [To my knowledge this is how to group elements into interfaces](https://github.com/polmoneys/tmk), tips on building [app](https://github.com/polmoneys/react-app) and how to [draaaag](https://github.com/polmoneys/draaaaaag)
-
 
 
 ## Inspiration 💐
