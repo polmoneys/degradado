@@ -1,0 +1,27 @@
+{
+  "name": "degradado",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf ./dist",
+    "build:static": "cp ../Readme.md ./dist && cp package.json ./dist",
+    "build:pack": "npm pack ./dist"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.37",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsup": "^6.7.0"
+  }
+}

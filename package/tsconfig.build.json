@@ -1,0 +1,14 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "emitDeclarationOnly": false,
+        "isolatedModules": false,
+        "noImplicitAny": false,
+        "target": "ESNext",
+        "module": "ESNext",
+        "typeRoots": [
+            "./src/types.d.ts",
+        ],
+        "skipLibCheck": true,
+    },
+}

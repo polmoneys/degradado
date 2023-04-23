@@ -1,0 +1,280 @@
+:root {
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  color: currentColor;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  padding: 1em;
+  font-size: 1.8em;
+  scroll-behavior: smooth;
+  display: grid;
+  place-content: center;
+  background-color: #f5f5f5;
+  background-color: #e9e8e8;
+  color: #222;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-family: 'Pirata One', cursive !important;
+  font-weight: 600;
+  font-size: 300%;
+  display: flex;
+  width: min(80vw, 480px);
+  margin-inline: auto;
+  line-height: 1;
+  background-image: linear-gradient(180deg, #222 0%, transparent 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  min-height: 93vh;
+  padding-top: 26vh;
+}
+
+h2 {
+  min-height: 30vh;
+}
+
+aside {
+  height: 100vh;
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 50vh;
+  --size: min(90vw, 1300px);
+  block-size: var(--size);
+  inline-size: var(--size);
+  margin-inline: auto;
+}
+
+small {
+  font-size: 60%;
+  padding-right: 0.2em;
+}
+.dropzone {
+  cursor: pointer;
+  border: 3px solid;
+  background-color: #fff;
+  display: flex;
+  min-height: 6em;
+  width: 100%;
+  place-items: center;
+  place-content: center;
+}
+.dropzone:has(:disabled) {
+  opacity: 0.5;
+  cursor: none;
+}
+
+.toast {
+  background: #999 !important;
+}
+
+.toast-body-meter,
+.toast-body-repeat,
+.toast-body-space {
+  display: grid;
+  place-content: center;
+  color: #222;
+}
+
+.toast-body-meter {
+  place-content: start;
+}
+.toast-body-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  font-size: 60%;
+}
+.toast-body-space {
+}
+.toast-body-repeat {
+}
+
+.quicksand * {
+  font-family: 'Quicksand', sans-serif !important;
+}
+ul,
+ol {
+  list-style: none;
+}
+.caption {
+  padding: 0.2em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  background-color: #999;
+  font-size: 72%;
+}
+
+.row {
+  display: flex;
+  align-self: stretch;
+}
+.sm .row * {
+  height: fit-content;
+}
+
+button {
+  padding: 0.2em 0.3em;
+  font-size: 18px;
+}
+
+button:disabled {
+  opacity: 0.4;
+}
+.row span:not(.tag) {
+  display: inline-flex;
+  width: 1.2em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.tag {
+  background-color: rgba(236, 136, 168, 1);
+  padding: 0.1em;
+  border-radius: 4px;
+}
+.sm {
+  font-size: 64%;
+}
+.xl {
+  font-size: 240%;
+}
+.gap {
+  gap: 0.2em;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 0.2em;
+  gap: 0.2em;
+}
+
+.align-center {
+  align-items: center;
+}
+.align-self-center {
+  align-self: center;
+}
+.mt-auto {
+  margin-top: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+
+.flex-1 {
+  flex: 1;
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-center .flex-1 {
+  text-align: center;
+}
+
+.fill {
+  width: 100%;
+}
+
+.fail {
+  background-color: red;
+}
+.success {
+  background-color: dodgerblue;
+}
+
+.failb {
+  background-color: #ff0055;
+}
+.successb {
+  background-color: #ff5500;
+}
+
+.stick {
+  width: 100%;
+}
+
+.interactive-group:has(:focus) * {
+  outline: none;
+}
+.input {
+  width: 100%;
+  height: 100%;
+  min-height: 48px;
+  border-color: transparent;
+  padding-left: 0.2em;
+  font-size: 60%;
+}
+
+.yellow {
+  color: yellow;
+}
+
+[data-ad] > div {
+  background-color: rgba(255, 255, 255, 1);
+}
+[data-ad] {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.2em;
+}
+
+[data-ad-item] {
+  display: grid;
+  place-items: center;
+  grid-column: span 6;
+  min-height: 10vh;
+  padding: 0.6em;
+}
+
+@media (orientation: portrait) {
+  [data-ad] > div {
+    grid-column: span 12;
+  }
+}
+
+[data-ad-item='12'] {
+  grid-column: span 12;
+}
+[data-ad-item='5'] {
+  grid-column: span 5;
+}
+
+[data-ad-item='6'] {
+  grid-column: span 6;
+}
+[data-ad-item='3'] {
+  grid-column: span 3;
+}
+
+[data-ad-item='2'] {
+  grid-column: span 2;
+}
+
+[data-ad-item='4'] {
+  grid-column: span 4;
+}

@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "strict": true,
+    "module": "ESNext",
+    "jsx": "preserve"
+  },
+  "include": [
+    "./src/index.ts",
+    "./src/types.d.ts"
+  ],
+}

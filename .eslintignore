@@ -1,0 +1,6 @@
+*.css
+*.svg
+jest-setup.ts
+tests-examples/*.ts
+package
+.eslintrc.cjs

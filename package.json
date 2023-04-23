@@ -1,0 +1,10 @@
+{
+  "name": "degradado-react",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "package",
+      "stories"
+    ]
+  }
+}
